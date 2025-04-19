@@ -222,7 +222,7 @@ function Game() {
           {/* Game grid */}
           <div className="flex h-[calc(100vh-8.5rem)]  gap-4">
             {/* Main Game */}
-            <div className="flex flex-col gap-4 basis-3/5 glow-wrapper">
+            <div className="flex flex-col gap-4 overflow-hidden basis-3/5 glow-wrapper">
               <div
                 data-glow
                 style={{
