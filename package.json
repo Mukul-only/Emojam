@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@react-spring/three": "^9.7.5",
-    "@react-three/drei": "^10.0.6",
-    "@react-three/fiber": "^9.1.2",
+    "@react-three/drei": "^9.80.2",
+    "@react-three/fiber": "^8.13.5",
     "axios": "^1.8.4",
     "framer-motion": "^12.6.3",
     "grapheme-splitter": "^1.0.4",
