@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Inter", sans-serif;
+}
+/* Add this to your global stylesheet */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 font-medium transition-colors duration-200 rounded-full;
+  }
+
+  .btn-primary {
+    @apply font-semibold bg-white;
+  }
+
+  .btn-secondary {
+    @apply text-white bg-secondary-500 hover:bg-secondary-600;
+  }
+
+  .btn-d {
+    @apply px-8 py-1 mx-auto text-gray-300 border-2 rounded-full border-card_border w-fit;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-100;
+  }
+  .btn-start {
+    @apply bg-[#00B822] border-2 border-[#03D429] hover:bg-[#1A9E32];
+  }
+  .btn-leave {
+    @apply bg-[#AF1212] border-2 border-[#DB1919] hover:bg-[#8C1010];
+  }
+  .input {
+    @apply text-white px-4 py-2 border bg-[#302F32] border-[#5B5B5B] rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-200;
+  }
+
+  .card {
+    @apply p-6 bg-transparent;
+  }
+  .game_card {
+    @apply border-[3px] bg-card_bg border-card_border;
+  }
+}
+
+.line {
+  @apply w-full border-t rounded-full border-[#333333];
+}
+
+body {
+  @apply min-h-screen bg-gray-50;
+}
+
+/* Emoji animations */
+.emoji-bounce {
+  display: inline-block;
+  animation: emoji-bounce 0.5s ease infinite alternate;
+}
+
+@keyframes emoji-bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* Message fade-in animation */
+.message-appear {
+  animation: message-fade-in 0.3s ease-out;
+}
+
+@keyframes message-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Correct guess highlight animation */
+.correct-guess {
+  animation: correct-pulse 1s ease-in-out;
+}
+
+@keyframes correct-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(52, 211, 153, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+  }
+}
+
+/* Timer animation */
+.timer-warning {
+  animation: timer-pulse 1s ease-in-out infinite;
+}
+
+@keyframes timer-pulse {
+  0% {
+    color: #ef4444;
+  }
+  50% {
+    color: #f87171;
+  }
+  100% {
+    color: #ef4444;
+  }
+}
